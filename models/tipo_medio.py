@@ -8,7 +8,7 @@ class tipo_medio(osv.osv):
     _description = 'CO Tipo Medio'
 
     _columns = {
-        'name' : fields.char('Nombre'),
+        'name' : fields.char('Nombre', required=True),
     }
 
 tipo_medio()
