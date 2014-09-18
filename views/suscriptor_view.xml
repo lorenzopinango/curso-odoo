@@ -62,7 +62,7 @@
 
     <menuitem id="submenu_suscriptor" name="Suscriptores" 
                   parent="menu_base_curso" sequence="15" 
-                  groups="base.group_user" />
+                  groups="group_admin,group_suscriptor" />
 
     <menuitem action="action_suscriptor" id="menu_suscriptor"
               sequence="5" parent="submenu_suscriptor" />
