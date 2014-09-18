@@ -15,7 +15,7 @@
                             <field name="active"/>
                         </div>
                         <div class="oe_title">
-                            <label for="code"/>
+                            <label for="code" class="oe_edit_only" string="Código (se genera de forma automática)"/>
                             <h1>
                                 <field name="code" readonly="1"/>
                             </h1>    
@@ -41,7 +41,7 @@
             <field name="name">co.suscripcion.tree</field>
             <field name="model">co.suscripcion</field>
             <field name="arch" type="xml">
-                <tree string="Suscripción">
+                <tree string="Suscripción" colors="brown:type=='bronce';gray:type=='plata';orange:type=='oro'">
                         <field name="code" />
                         <field name="type" />
                         <field name="date_start" />

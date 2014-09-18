@@ -17,7 +17,7 @@ class suscripcion(osv.osv):
     _order = 'date_start desc'
 
     _columns = {
-        'code' : fields.char('Código'),
+        'code' : fields.char('Código', help="El código se genera luego de guardar..."),
         'type' : fields.selection(TIPOS, 'Tipo de suscripción', required=True),
         'date_start' : fields.date('Inicio suscripción', required=True),
         'date_end' : fields.date('Fin suscripción', required=True),
@@ -29,6 +29,18 @@ class suscripcion(osv.osv):
         'active' : True,
         'date_start' : datetime.now().strftime('%Y-%m-%d'),
     }
+
+    def _check_dates(self, cr, uid, ids, context=None):
+        if isinstance(ids, (int, long)):
+            ids = [ids]
+        for s in self.browse(cr, uid, ids, context=context):
+            if s.date_end <= s.date_start:
+                return False
+        return True
+
+    _constraints = [
+        (_check_dates, 'Fecha de inicio debe ser menor a la fecha final', ['date_start', 'date_end']),
+    ]
 
     def create(self, cr, uid, values, context=None):
         if context is None:

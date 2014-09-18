@@ -5,12 +5,12 @@
     Menú Padre
 -->
         <menuitem id="menu_base_curso" name="Inicio" sequence="5" 
-                  groups="base.group_user" />
+                  groups="group_admin,group_suscriptor" />
 <!--
     Submenu multimedia
 -->
         <menuitem id="submenu_multimedia" name="Multimedia" 
                   parent="menu_base_curso" sequence="5" 
-                  groups="base.group_user" />
+                  groups="group_admin,group_suscriptor" />
     </data>
 </openerp>
