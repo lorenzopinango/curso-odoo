@@ -26,8 +26,10 @@
                                 <group>
                                     <field name="line_ids" nolabel="1">
                                         <tree editable="bottom" delete="false">
-                                            <field name="multimedia_id"/>
-                                            <field name="medio_id"/>
+                                            <field name="medio_id" 
+                                                   on_change="onchange_medio_id(medio_id)"/>
+                                            <field name="multimedia_id" 
+                                                   domain="[('medio_ids','=',medio_id)]"/>
                                             <field name="tienda_id" invisible="1"/>
                                             <!-- attrs="{'readonly':[('quantity','&lt;',1)]}" Ejemplo de readonly condicionado-->
                                             <field name="quantity"/>
