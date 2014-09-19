@@ -15,3 +15,7 @@ access_categoria_admin,access.categoria.admin,curso_odoo.model_co_categoria,grou
 access_tienda_admin,access.tienda.admin,curso_odoo.model_co_tienda,group_admin,1,1,1,1
 access_lineas_stock_admin,access.lineas.stock.admin,curso_odoo.model_co_lineas_stock,group_admin,1,1,1,1
 access_suscriptor_admin,access.suscriptor.admin,curso_odoo.model_co_suscriptor,group_admin,1,1,1,1
+access_admin_users,access.admin.users,base.model_res_users,group_admin,1,1,1,0
+access_suscriptor_users,access.suscriptor.users,base.model_res_users,group_suscriptor,1,0,0,0
+access_tipo_suscripcion_admin,access.tipo.suscripcion.admin,curso_odoo.model_co_tipo_suscripcion,group_admin,1,1,1,1
+access_tipo_suscripcion_suscriptor,access.tipo.suscripcion.suscriptor,curso_odoo.model_co_tipo_suscripcion,group_suscriptor,1,0,0,0

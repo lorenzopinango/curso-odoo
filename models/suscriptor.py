@@ -13,6 +13,7 @@ class suscriptor(osv.osv):
         'name' : fields.char('Nombre y Apellido', required=True),
         'identification' : fields.char('Cédula', required=True),
         'address' : fields.text('Dirección'),
+        'user_id' : fields.many2one('res.users', 'Usuario'),
     }
 
     _sql_constraints = [
