@@ -8,5 +8,27 @@
         <record id="group_suscriptor" model="res.groups">
             <field name="name">Suscriptores</field>
         </record>
+
+        <!--<record id="suscriptor_mmedia_disponible" model="ir.rule">
+            <field name="name">Multimedia disponible por suscripcion</field>
+            <field name="model_id" ref="model_co_multimedia" />
+            <field name="domain_force">[('medio_ids', '=', user.suscriptor_id.suscripcion_ids.type.medio_ids.id)]</field>
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+            <field name="groups" eval="[(4, ref('group_suscriptor'))]" />
+        </record>-->
+
+        <record id="mi_suscripcion" model="ir.rule">
+            <field name="name">Mi suscripcion</field>
+            <field name="model_id" ref="model_co_suscripcion" />
+            <field name="domain_force">[('suscriptor_id.user_id', '=', user.id)]</field>
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="False" />
+            <field name="perm_create" eval="False" />
+            <field name="perm_unlink" eval="False" />
+            <field name="groups" eval="[(4, ref('group_suscriptor'))]" />
+        </record>
     </data>
 </openerp>
