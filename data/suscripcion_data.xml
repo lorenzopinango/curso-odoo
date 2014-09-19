@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+<!--
+        Definicion de la secuencia para la suscripcion
+-->
+        <record id="seq_suscripcion_type" model="ir.sequence.type">
+            <field name="name">Secuencia Suscripcion</field>
+            <field name="code">seq.suscripcion</field>
+        </record>
+        <record id="seq_suscripcion" model="ir.sequence">
+            <field name="name">Secuencia Suscripcion</field>
+            <field name="code">seq.suscripcion</field>
+            <field name="padding" eval="4" />
+            <field name="prefix">SUS/%(year)s/</field>
+        </record>
+<!--
+        Definicion de los tres tipos basicos de suscipcion
+-->
+        <record id="tipo_suscripcion_bronce" model="co.tipo.suscripcion">
+            <field name="name">Bronce</field>
+        </record>
+
+        <record id="tipo_suscripcion_plata" model="co.tipo.suscripcion">
+            <field name="name">Plata</field>
+        </record>
+        
+        <record id="tipo_suscripcion_oro" model="co.tipo.suscripcion">
+            <field name="name">Oro</field>
+        </record>
+    </data>
+</openerp>
